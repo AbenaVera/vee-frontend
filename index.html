@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vee Task Manager</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-tasks"></i> Vee Task Manager</h1>
+      </header>
+
+      <main>
+        <div class="main-content">
+          <section class="task-form">
+            <h2>Create New Task</h2>
+            <form id="taskForm">
+              <div class="form-group">
+                <label for="taskTitle">Task Title</label>
+                <input
+                  type="text"
+                  id="taskTitle"
+                  name="taskTitle"
+                  required=""
+                  placeholder="Enter task title"
+                />
+              </div>
+              <div class="form-group">
+                <label for="taskDescription">Description</label>
+                <textarea
+                  id="taskDescription"
+                  name="taskDescription"
+                  rows="3"
+                  placeholder="Enter task description"
+                ></textarea>  
+              </div>
+              <div class="form-group">
+                <label for="user_id">User</label>
+                <select id="user_id" name="user_id" required="">
+                  <option value="">Select user</option>
+                  <option value="2">John Doe</option>
+                  <option value="3">Jane Smith</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="taskPriority">Priority</label>
+                <input type="number" id="taskPriority" name="taskPriority" required="" />
+              </div>
+              <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" name="status" required="">
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
+              <button type="submit" class="btn">Create Task</button>
+            </form>
+          </section>
+
+          <section class="tasks">
+            <h2>Task List</h2>
+            <div class="task-filters">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="todo">To Do</button>
+              <button class="filter-btn" data-filter="in-progress">
+                In Progress
+              </button>
+              <button class="filter-btn" data-filter="completed">
+                Completed
+              </button>
+            </div>
+            <div class="task-list" id="taskList">
+              <!-- Tasks will be dynamically added here -->
+            </div>
+          </section>
+        </div>
+        <aside class="team-sidebar">
+          <section class="teams">
+            <h2>Team Members</h2>
+          <div class="team-members">
+            <div class="member">
+              <div class="member-avatar">JD</div>
+              <div class="member-info">
+                <h4>John Doe</h4>
+                <span class="member-role">Developer</span>
+                <span class="task-count">3 tasks</span>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-avatar">JD</div>
+              <div class="member-info">
+                <h4>Alex Johnson</h4>
+                <span class="member-role">Designer</span>
+                <span class="task-count">2 tasks</span>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-avatar">AJ</div>
+              <div class="member-info">
+                <h4>Jane Smith</h4>
+                <span class="member-role">Manager</span>
+                <span class="task-count">1 task</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-add-member">
+            <i class="fas fa-plus"></i> Add Team Member
+          </button>
+          </section>
+
+          <section class="users">
+            <h2>Users</h2>
+             <div class="team-members">
+            <div class="member">
+              <div class="member-avatar">JD</div>
+              <div class="member-info">
+                <h4>Liam James</h4>
+                <span class="task-count">3 tasks</span>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-avatar">JS</div>
+              <div class="member-info">
+                <h4>Sophia Grace</h4>
+                <span class="task-count">2 tasks</span>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-avatar">AJ</div>
+              <div class="member-info">
+                <h4>Ethan Alexander</h4>
+                <span class="task-count">1 task</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-add-member">
+            <i class="fas fa-plus"></i> Add User
+          </button>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <footer>
+      <p>Copyright &copy; 2025 Vee Task Manager. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>
